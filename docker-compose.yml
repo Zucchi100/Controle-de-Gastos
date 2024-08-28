@@ -1,7 +1,7 @@
 version: "3"
 
 services:  
- mongo:
+  mongo:
     container_name: mongodb
     restart: always
     image: mongo
@@ -12,8 +12,8 @@ services:
       - "27017:27017" 
     networks:
       - local 
-  
- app:
+
+  app:
     depends_on:
       - mongo 
     container_name: devbills-api
